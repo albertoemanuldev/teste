@@ -1,0 +1,28 @@
+h1{
+    color: blue;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+.image-container {
+  position: relative; /* Necessário para posicionar o texto sobre a imagem */
+  display: inline-block; /* Permite que o div se ajuste ao tamanho da imagem */
+}
+
+.image-description {
+  position: absolute; /* Posiciona o texto sobre o contêiner */
+  bottom: 0; /* Alinha o texto à parte inferior do contêiner */
+  left: 0; /* Alinha o texto à esquerda do contêiner */
+  width: 100%; /* Garante que a descrição ocupe toda a largura */
+  background-color: rgba(0, 0, 0, 0.7); /* Fundo semi-transparente */
+  color: white; /* Cor do texto */
+  padding: 10px; /* Espaçamento interno */
+  opacity: 0; /* Oculta o texto inicialmente */
+  transition: opacity 0.3s ease; /* Adiciona uma transição suave */
+  pointer-events: none; /* Evita que o texto interaja com o mouse */
+}
+
+.image-container:hover .image-description {
+  opacity: 1; /* Torna o texto visível ao passar o mouse */
+  pointer-events: auto; /* Permite interação com o mouse quando visível */
+}
